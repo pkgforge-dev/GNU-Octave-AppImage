@@ -6,7 +6,17 @@ ARCH=$(uname -m)
 
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
-# pacman -Syu --noconfirm PACKAGESHERE
+pacman -Syu --noconfirm \
+    gnuplot       \
+    kvantum       \
+    lxqt-qtplugin \
+    octave        \
+    patchelf      \
+    portaudio     \
+    qt6-svg       \
+    qt6ct         \
+    texinfo       \
+    texlive-bin
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
