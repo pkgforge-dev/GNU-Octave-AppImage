@@ -12,11 +12,11 @@ export ICON=/usr/share/icons/hicolor/256x256/apps/octave.png
 export DEPLOY_QT=1
 export QT_DIR=qt6
 
-# Copy qt.conf alongside the actual binary so Qt can find bundled sqldrivers plugin
-cp AppDir/bin/qt.conf AppDir/shared/qt.conf
-
 # Deploy dependencies
 quick-sharun /usr/lib/octave /usr/share/octave /usr/bin/octave /usr/bin/octave-cli /usr/lib/qt6/plugins/sqldrivers
+
+# Copy qt.conf alongside the actual binary so Qt can find bundled sqldrivers plugin
+cp AppDir/bin/qt.conf AppDir/shared/qt.conf
 
 # Turn AppDir into AppImage
 quick-sharun --make-appimage
