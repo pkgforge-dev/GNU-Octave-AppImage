@@ -21,6 +21,7 @@ quick-sharun /usr/bin/gnuplot* \
 /usr/lib/octave/*/lib*.so* \
 /usr/lib/qt6/plugins/sqldrivers \
 /usr/share/octave/* \
+/usr/share/octave/*/doc/* \
 /usr/share/gnuplot
 
 # Copy qt.conf alongside the actual binary so Qt can find bundled sqldrivers plugin
