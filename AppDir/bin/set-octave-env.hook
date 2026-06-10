@@ -1,1 +1,1 @@
-export OCTAVE_HOME="${APPDIR}/share/octave/11.3.0
+export OCTAVE_HOME="${APPDIR}/share/octave/11.3.0"
