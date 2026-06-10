@@ -15,11 +15,6 @@ export QT_DIR=qt6
 # Deploy dependencies
 quick-sharun /usr/lib/octave /usr/share/octave /usr/bin/octave /usr/bin/octave-cli /usr/lib/qt6/plugins/sqldrivers
 
-# Hook sets OCTAVE_HOME — octave-gui doesn't set it itself (only the octave wrapper does)
-#cat > AppDir/bin/set-octave-env.hook << 'EOF'
-#xport OCTAVE_HOME="${APPDIR}/share/octave/11.3.0"
-#EOF
-
 # Copy qt.conf alongside the actual binary so Qt can find bundled sqldrivers plugin
 cp AppDir/bin/qt.conf AppDir/shared/qt.conf
 
