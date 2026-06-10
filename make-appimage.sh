@@ -13,9 +13,30 @@ export DEPLOY_QT=1
 export QT_DIR=qt6
 
 # Deploy dependencies
-quick-sharun /usr/lib/octave /usr/share/octave
+quick-sharun /usr/lib/octave /usr/share/octave /usr/bin/octave /usr/bin/octave-cli /usr/lib/qt6/plugins/sqldrivers
 
-# Additional changes can be done in between here
+# Override AppRun to launch via octave wrapper (needed for --gui flag, display init,
+# and runtime Qt SQL plugin loading which quick-sharun can't auto-detect)
+#cat > AppDir/AppRun << 'EOF'
+#!/bin/sh
+#CURRENTDIR="$(dirname "$(readlink -f "$0")")"
+#HOOKSDIR="${CURRENTDIR}/.hooks"
+#if [ -d "${HOOKSDIR}" ]; then
+#    for hook in "${HOOKSDIR}"/*.hook; do
+#        [ -f "${hook}" ] || continue
+#        case "${hook}" in
+#            *.bg.hook)
+#                "${hook}" &
+#                ;;
+#            *)
+#                . "${hook}"
+#                ;;
+#        esac
+#    done
+#fi
+#. "${CURRENTDIR}/.env"
+#exec "${CURRENTDIR}/bin/octave" --gui "$@"
+#EOF
 
 # Turn AppDir into AppImage
 quick-sharun --make-appimage

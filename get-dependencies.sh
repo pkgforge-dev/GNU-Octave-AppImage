@@ -11,6 +11,7 @@ pacman -Syu --noconfirm \
     lxqt-qtplugin \
     octave        \
     portaudio     \
+    qt6-svg       \
     qt6ct         \
     texinfo       \
     texlive-bin
