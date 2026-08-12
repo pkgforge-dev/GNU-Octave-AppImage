@@ -33,7 +33,7 @@ quick-sharun /usr/bin/gnuplot* \
 /usr/share/gnuplot
 
 # Copy qt.conf alongside the actual binary so Qt can find bundled sqldrivers plugin
-cp AppDir/bin/qt.conf AppDir/shared/qt.conf
+#cp AppDir/bin/qt.conf AppDir/shared/qt.conf
 
 # Turn AppDir into AppImage
 quick-sharun --make-appimage
