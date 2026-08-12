@@ -13,15 +13,23 @@ export DEPLOY_QT=1
 export QT_DIR=qt6
 
 # Deploy dependencies
+#quick-sharun /usr/bin/gnuplot* \ 
+#/usr/bin/octave \
+#/usr/bin/octave-cli \
+#/usr/lib/octave \
+#/usr/lib/octave/*/exec/*/octave-gui \
+#/usr/lib/octave/*/lib*.so* \
+#/usr/lib/qt6/plugins/sqldrivers \
+#/usr/share/octave/* \
+#/usr/share/octave/*/doc/* \
+#/usr/share/gnuplot
+
 quick-sharun /usr/bin/gnuplot* \
 /usr/bin/octave \
 /usr/bin/octave-cli \
 /usr/lib/octave \
-/usr/lib/octave/*/exec/*/octave-gui \
-/usr/lib/octave/*/lib*.so* \
 /usr/lib/qt6/plugins/sqldrivers \
-/usr/share/octave/* \
-/usr/share/octave/*/doc/* \
+/usr/share/octave \
 /usr/share/gnuplot
 
 # Copy qt.conf alongside the actual binary so Qt can find bundled sqldrivers plugin
