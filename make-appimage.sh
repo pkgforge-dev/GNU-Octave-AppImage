@@ -12,14 +12,18 @@ export ICON=/usr/share/icons/hicolor/256x256/apps/octave.png
 export DEPLOY_QT=1
 export QT_DIR=qt6
 
+# The arch package incorrectly gives executacle bit to files in /usr/lib/octave/11.3.0/oct
+# These are all shared objects and not executables, this confuses quick-sharun
+find /usr/lib/octave/*/oct -type f -exec chmod -x {} \;
+
 # Deploy dependencies
-quick-sharun /usr/bin/gnuplot* \
-/usr/bin/octave \
-/usr/bin/octave-cli \
-/usr/lib/octave \
-/usr/lib/qt6/plugins/sqldrivers \
-/usr/share/octave \
-/usr/share/gnuplot
+quick-sharun \
+	/usr/bin/octave*   \
+	/usr/lib/octave    \
+	/usr/share/octave  \
+	/usr/bin/gnuplot*  \
+	/usr/share/gnuplot \
+	/usr/lib/qt6/plugins/sqldrivers
 
 # Additional changes can be done in between here
 echo 'OCTAVE_HOME=$APPDIR' >> ./AppDir/.env
