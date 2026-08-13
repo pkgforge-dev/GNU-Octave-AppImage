@@ -11,7 +11,6 @@ pacman -Syu --noconfirm \
     kvantum       \
     lxqt-qtplugin \
     octave        \
-    patchelf      \
     portaudio     \
     qt6-svg       \
     qt6ct         \
