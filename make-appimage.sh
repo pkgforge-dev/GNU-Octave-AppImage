@@ -13,13 +13,20 @@ export DEPLOY_QT=1
 export QT_DIR=qt6
 
 # Deploy dependencies
-quick-sharun /usr/bin/gnuplot* \
+#quick-sharun /usr/bin/gnuplot* \
+#/usr/bin/octave \
+#/usr/bin/octave-cli \
+#/usr/lib/octave \
+#/usr/lib/qt6/plugins/sqldrivers \
+#/usr/share/octave \
+#/usr/share/gnuplot
+
+quick-sharun \
 /usr/bin/octave \
 /usr/bin/octave-cli \
 /usr/lib/octave \
 /usr/lib/qt6/plugins/sqldrivers \
-/usr/share/octave \
-/usr/share/gnuplot
+/usr/share/octave
 
 # Additional changes can be done in between here
 echo 'OCTAVE_HOME=$APPDIR' >> ./AppDir/.env
