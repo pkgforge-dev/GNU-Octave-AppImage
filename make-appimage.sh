@@ -14,7 +14,7 @@ export QT_DIR=qt6
 
 # The arch package incorrectly gives executacle bit to files in /usr/lib/octave/11.3.0/oct
 # These are all shared objects and not executables, this confuses quick-sharun
-find /usr/lib/octave/11.3.0/oct -type f -exec chmod -x {} \;
+find /usr/lib/octave/*/oct -type f -exec chmod -x {} \;
 
 # Deploy dependencies
 quick-sharun \
