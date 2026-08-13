@@ -17,7 +17,7 @@
 
 </div>
 
-### ⚠️ Start with `--gui` to use Qt interface ⚠️
+### ⚠️ Use `--gui` to start with Qt interface ⚠️
 
 ---
 
