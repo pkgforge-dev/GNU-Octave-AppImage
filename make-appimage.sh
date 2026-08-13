@@ -34,6 +34,7 @@ quick-sharun /usr/bin/gnuplot* \
 
 # Copy qt.conf alongside the actual binary so Qt can find bundled sqldrivers plugin
 #cp AppDir/bin/qt.conf AppDir/shared/qt.conf
+echo 'OCTAVE_HOME=$APPDIR' >> ./AppDir/.env
 
 # Turn AppDir into AppImage
 quick-sharun --make-appimage
