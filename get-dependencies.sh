@@ -7,6 +7,7 @@ ARCH=$(uname -m)
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
+    gnuplot       \
     kvantum       \
     lxqt-qtplugin \
     octave        \
@@ -16,8 +17,6 @@ pacman -Syu --noconfirm \
     qt6ct         \
     texinfo       \
     texlive-bin
-#    gnuplot       \
-
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
