@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Launch the GUI when AppImage is double clicked
+if [ "${ARG0##*/}" = "${APPIMAGE##*/}" ] && [ -z "$1" ]; then
+	[ -t 0 ] || set -- --gui
+fi
