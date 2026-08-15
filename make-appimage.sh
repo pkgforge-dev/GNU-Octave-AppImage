@@ -3,7 +3,7 @@
 set -eu
 
 ARCH=$(uname -m)
-VERSION=$(pacman -Q octave | awk '{print $2; exit}') # example command to get version of application here
+VERSION=$(pacman -Q octave | awk '{print $2; exit}')
 export ARCH VERSION
 export OUTPATH=./dist
 export ADD_HOOKS="self-updater.hook"
@@ -26,7 +26,6 @@ quick-sharun \
 	/usr/share/gnuplot \
 	/usr/lib/qt6/plugins/sqldrivers
 
-# Additional changes can be done in between here
 echo 'OCTAVE_HOME=$APPDIR' >> ./AppDir/.env
 
 # Turn AppDir into AppImage
