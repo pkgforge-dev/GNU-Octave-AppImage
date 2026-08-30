@@ -10,8 +10,7 @@ export ADD_HOOKS="self-updater.hook"
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
 export DESKTOP=/usr/share/applications/org.octave.Octave.desktop
 export ICON=/usr/share/icons/hicolor/256x256/apps/octave.png
-export DEPLOY_QT=1
-export QT_DIR=qt6
+export USE_HOST_DRIVERS_EXPERIMENTAL=1
 
 # The arch package incorrectly gives executacle bit to files in /usr/lib/octave/11.3.0/oct
 # These are all shared objects and not executables, this confuses quick-sharun
